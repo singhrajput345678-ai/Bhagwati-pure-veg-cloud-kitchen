@@ -1,176 +1,56 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Bhagwati Kitchen | Pure Veg Cloud Kitchen Ranchi</title>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+├─ backend/
+│  ├─ main.mo
+│  └─ types.mo
+│
+├─ frontend/
+│  ├─ index.html
+│  ├─ src/
+│  │  ├─ App.tsx
+│  │  ├─ main.tsx
+│  │  ├─ components/
+│  │  │  ├─ Header.tsx
+│  │  │  ├─ Footer.tsx
+│  │  │  ├─ HomeSection.tsx
+│  │  │  ├─ MenuSection.tsx
+│  │  │  ├─ AboutSection.tsx
+│  │  │  └─ ContactSection.tsx
+│  │  ├─ data/
+│  │  │  └─ menu.ts
+│  │  └─ styles/
+│  │     └─ globals.css
+│  └─ public/assets/
+│     └─ generated/
+│        ├─ bhagwati-logo.png
+│        └─ bhagwati-hero.png
+│
+├─ dfx.json
+├─ canister.yaml
+└─ package.json
+Example: frontend/src/App.tsx
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+import HomeSection from "./components/HomeSection";
+import MenuSection from "./components/MenuSection";
+import AboutSection from "./components/AboutSection";
+import ContactSection from "./components/ContactSection";
 
-    <!-- favicon: place a favicon.ico or favicon-32x32.png in the same folder -->
-    <link rel="icon" href="/favicon.ico" />
-    <meta name="theme-color" content="#fdfae6" />
-
-    <style>
-        :root {
-            --brand-yellow: #f4b41a;
-            --brand-green: #4b6a2f;
-            --bg-cream: #fdfae6;
-            --dark-brown: #4a342e;
-        }
-
-        body {
-            font-family: 'Poppins', sans-serif;
-            background-color: var(--bg-cream);
-            margin: 0;
-            color: var(--dark-brown);
-        }
-
-        /* Header & Logo */
-        header {
-            background: white;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 20px 16px;
-            box-sizing: border-box;
-        }
-
-        /* Use an anchor so logo is clickable (goes to homepage) */
-        .logo-link {
-            display: inline-block;
-            text-decoration: none;
-        }
-
-        /* Logo image: set a fixed display width and preserve aspect ratio.
-           width/height attributes on the <img> reserve space to avoid layout shift. */
-        .logo-img {
-            display: block;
-            width: 180px;        /* main display width (change if desired) */
-            height: auto;
-            max-width: 80%;      /* keeps logo from overflowing on very small screens */
-        }
-
-        /* Make logo smaller on small devices */
-        @media (max-width: 480px) {
-            .logo-img { width: 140px; }
-        }
-
-        .hero-banner { background-color: var(--brand-yellow); text-align: center; padding: 25px; border-bottom: 5px solid #d49a12; }
-        .hero-banner h1 { font-family: 'Playfair Display', serif; font-size: 2.8rem; margin: 0; color: var(--dark-brown); }
-
-        /* Navigation */
-        nav { background: var(--brand-green); display: flex; justify-content: center; padding: 12px; }
-        nav a { color: #f4f09a; text-decoration: none; margin: 0 15px; font-weight: bold; font-size: 0.9rem; }
-
-        /* Menu Grid */
-        .menu-container { padding: 40px 10%; display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
-        .menu-card h3 { background: var(--brand-yellow); display: inline-block; padding: 5px 20px; border-radius: 4px; font-size: 1.1rem; margin-bottom: 15px; width: 80%; }
-
-        .menu-item { display: flex; justify-content: space-between; margin-bottom: 10px; border-bottom: 1px dotted #b5a48b; padding-bottom: 5px; }
-        .price::before { content: "■ "; color: var(--brand-green); margin-right: 5px; }
-
-        /* Ordering Buttons */
-        .order-buttons { display: flex; flex-wrap: wrap; justify-content: center; gap: 15px; padding: 40px 5%; background: #fffcf0; }
-        .btn { padding: 14px 28px; border-radius: 8px; text-decoration: none; color: white; font-weight: bold; transition: 0.3s; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
-        .btn-black { background: #000; }
-        .btn-red { background: #cb202d; }
-        .btn-orange { background: #fc8019; }
-        .btn-whatsapp { background: #25d366; border: 2px solid #128c7e; }
-        .btn:hover { transform: translateY(-2px); filter: brightness(1.1); }
-
-        /* Footer */
-        footer { background: var(--dark-brown); color: white; padding: 40px 10%; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 30px; }
-        .footer-col h4 { color: var(--brand-yellow); border-bottom: 1px solid #6d4c41; padding-bottom: 10px; margin-bottom: 15px; }
-
-        @media (max-width: 600px) {
-            .hero-banner h1 { font-size: 1.8rem; }
-            nav { flex-wrap: wrap; }
-            nav a { margin: 5px 10px; }
-        }
-    </style>
-</head>
-<body>
-
-<header>
-    <a class="logo-link" href="/" aria-label="Bhagwati Pure Veg Kitchen home">
-        <!--
-          Important attributes to avoid layout shift and improve priority:
-          - width / height: match the displayed dimensions (here 180x180). If your source image has different natural dimensions,
-            set these values to the displayed pixel size (or to the image intrinsic size scaled).
-          - loading="eager" and fetchpriority="high" help priority-critical images load promptly.
-          - decoding="async" is a mild optimization.
-        -->
-        <img
-            src="1000129397.png"
-            alt="Bhagwati Pure Veg Logo"
-            class="logo-img"
-            width="180"
-            height="180"
-            loading="eager"
-            decoding="async"
-            fetchpriority="high"
-        />
-    </a>
-</header>
-
-<div class="hero-banner">
-    <h1>Taste of Home, Delivered.</h1>
-</div>
-
-<nav>
-    <a href="#">HOME</a>
-    <a href="#">ABOUT US</a>
-    <a href="#">MENU</a>
-    <a href="#">ORDER NOW</a>
-    <a href="#">CONTACT</a>
-</nav>
-
-<div class="menu-container">
-    <div class="menu-card">
-        <h3>COMBO MEALS</h3>
-        <div class="menu-item"><span>Veg Thali</span> <span class="price">180</span></div>
-        <div class="menu-item"><span>Punjabi Combo</span> <span class="price">200</span></div>
-        <div class="menu-item"><span>Chinese Combo</span> <span class="price">200</span></div>
+export default function App() {
+  return (
+    <div className="min-h-screen flex flex-col">
+      <Header />
+      <main className="flex-1">
+        <HomeSection />
+        <MenuSection />
+        <AboutSection />
+        <ContactSection />
+      </main>
+      <Footer />
     </div>
-
-    <div class="menu-card">
-        <h3>MAIN CURRIES</h3>
-        <div class="menu-item"><span>Paneer Butter Masala</span> <span class="price">250</span></div>
-        <div class="menu-item"><span>Dal Tadka</span> <span class="price">140</span></div>
-        <div class="menu-item"><span>Malai Kofta</span> <span class="price">250</span></div>
-    </div>
-
-    <div class="menu-card">
-        <h3>LOCAL SPECIAL</h3>
-        <div class="menu-item"><span>Litti Chokha (2 pcs)</span> <span class="price">150</span></div>
-        <div class="menu-item"><span>Sattu Paratha</span> <span class="price">140</span></div>
-        <div class="menu-item"><span>Khichdi</span> <span class="price">120</span></div>
-    </div>
-</div>
-
-<div class="order-buttons">
-    <a href="#" class="btn btn-black">UberEats</a>
-    <a href="#" class="btn btn-red">Zomato</a>
-    <a href="#" class="btn btn-orange">Swiggy</a>
-    <a href="https://wa.me/919812431190?text=Hi%20Bhagwati%20Kitchen,%20I'd%20like%20to%20order:" class="btn btn-whatsapp">
-        Order via WhatsApp
-    </a>
-</div>
-
-<footer>
-    <div class="footer-col">
-        <h4>Operating Hours</h4>
-        <p>Everyday: 09:00 - 23:30</p>
-    </div>
-    <div class="footer-col">
-        <h4>Location</h4>
-        <p>Bhagauti Nagar, Getlatu<br>Ranchi, Jharkhand</p>
-    </div>
-    <div class="footer-col">
-        <h4>Contact</h4>
-        <p>Phone: +91 9812431190<br>Email: info@bhagwatikitchen.com</p>
-    </div>
-</footer>
-
-</body>
-</html>
+  );
+}
+Example: backend/main.mo
+actor {
+  public query func health() : async Text {
+    "Bhagwati Cloud Kitchen backend running"
+  };
+}
