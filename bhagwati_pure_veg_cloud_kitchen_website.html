@@ -1,184 +1,209 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bhagwati Pure Veg | Ranchi's Best Cloud Kitchen</title>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <style>
-        :root {
-            --primary-green: #1b4332;
-            --accent-gold: #c5a059;
-            --whatsapp-color: #25D366;
-            --light-bg: #fdfaf5;
-            --white: #ffffff;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bhagwati Kitchen | Pure Veg Cloud Kitchen Ranchi</title>
 
-        * { box-sizing: border-box; scroll-behavior: smooth; }
-        body { font-family: 'Poppins', sans-serif; margin:0; background-color: var(--light-bg); color: #333; }
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&family=Inter&display=swap" rel="stylesheet">
 
-        /* Logo and Hero Styling */
-        .hero {
-            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1585937421612-70a008356fbe?auto=format&fit=crop&w=1600&q=80');
-            background-size: cover;
-            background-position: center;
-            padding: 100px 20px;
-            text-align: center;
-            color: white;
-        }
-
-        .logo-container {
-            background: white;
-            padding: 15px;
-            border-radius: 50%;
-            display: inline-block;
-            margin-bottom: 20px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
-        }
-
-        .main-logo { max-width: 140px; height: auto; display: block; }
-
-        nav { 
-            background: var(--white); 
-            padding: 15px; 
-            position: sticky; 
-            top: 0; 
-            z-index: 1000; 
-            text-align: center; 
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        }
-        nav a { margin: 0 15px; text-decoration: none; color: var(--primary-green); font-weight: 600; }
-
-        section { padding: 60px 20px; max-width: 1100px; margin: 0 auto; }
-        
-        .menu-category { margin-bottom: 40px; }
-        .category-title {
-            font-family: 'Playfair Display', serif;
-            color: var(--primary-green);
-            border-bottom: 3px solid var(--accent-gold);
-            display: inline-block;
-            margin-bottom: 25px;
-            font-size: 1.8rem;
-        }
-
-        .menu-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
-        }
-
-        .menu-item {
-            background: white;
-            padding: 20px;
-            border-radius: 12px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-            transition: 0.3s;
-        }
-
-        .menu-item:hover { transform: translateY(-3px); box-shadow: 0 6px 12px rgba(0,0,0,0.1); }
-        .item-info h4 { margin: 0; color: #222; font-size: 1rem; }
-        .item-info p { margin: 5px 0 0; font-size: 0.85rem; color: #777; }
-        .price { color: var(--primary-green); font-weight: 700; font-size: 1.1rem; }
-
-        .whatsapp-float {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            background: var(--whatsapp-color);
-            color: white;
-            padding: 15px 25px;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: bold;
-            z-index: 2000;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-            display: flex;
-            align-items: center;
-        }
-
-        footer { background: #111; color: white; text-align: center; padding: 30px; }
-    </style>
+<style>
+body{margin:0;font-family:'Inter',sans-serif;background:#f9faf7;color:#333}
+header{background:linear-gradient(135deg,#2f6b3f,#6faa4d);color:#fff;text-align:center;padding:30px 15px}
+header img{max-width:150px;height:auto;margin-bottom:10px}
+h1,h2{font-family:'Poppins',sans-serif}
+.section{padding:25px 15px;max-width:1100px;margin:auto}
+.menu-item{display:flex;justify-content:space-between;border-bottom:1px dashed #ccc;padding:6px 0}
+.price{font-weight:bold;color:#6b3e26}
+.badges span{display:inline-block;background:#e8f3ea;color:#2f6b3f;padding:8px 12px;margin:5px;border-radius:20px;font-weight:bold;font-size:14px}
+.card{background:#fff;padding:15px;border-radius:10px;margin:10px 0;box-shadow:0 2px 6px rgba(0,0,0,.1)}
+.order-buttons a{display:block;background:#2f6b3f;color:#fff;text-align:center;padding:12px;margin:10px 0;border-radius:8px;text-decoration:none;font-weight:bold}
+.review{background:#fff;border-left:5px solid #6faa4d;padding:12px;margin:10px 0}
+footer{background:#2f6b3f;color:#fff;text-align:center;padding:15px;font-size:14px}
+.whatsapp-float{position:fixed;bottom:20px;right:20px;background:#25D366;color:white;border-radius:50%;padding:16px;font-size:22px;text-decoration:none;z-index:999}
+.map-container iframe{width:100%;height:300px;border:0;}
+.menu-category{margin-top:20px}
+.menu-category h3{color:#2f6b3f;margin-bottom:8px}
+.menu-category label{display:block;margin:5px 0;font-weight:500;}
+.menu-category input[type=number]{width:50px;margin-left:10px;padding:3px}
+button{background:#2f6b3f;color:#fff;padding:10px 15px;margin-top:10px;border:none;border-radius:6px;font-weight:bold;cursor:pointer;}
+button:hover{background:#1f4b26;}
+</style>
 </head>
+
 <body>
 
-<a href="https://wa.me/919304065255?text=I%20want%20to%20order%20from%20Bhagwati%20Pure%20Veg!" class="whatsapp-float">
-    <i class="fab fa-whatsapp" style="margin-right:10px; font-size:24px;"></i> Order Now
-</a>
-
-<header class="hero">
-    <div class="logo-container">
-        <img src="image_66b17e.jpg" alt="Bhagwati Logo" class="main-logo">
-    </div>
-    <h1 style="font-family: 'Playfair Display', serif; font-size: 3rem; margin: 10px 0;">Bhagwati Pure Veg</h1>
-    <p style="letter-spacing: 2px; color: var(--accent-gold); font-weight: bold;">AUTHENTIC CLOUD KITCHEN • RANCHI</p>
+<header>
+<img src="logo.png" alt="Bhagwati Kitchen Logo">
+<h1>Bhagwati Kitchen</h1>
+<p>Pure Veg Cloud Kitchen • Ranchi</p>
+<p>घर जैसा स्वाद, हर ऑर्डर ताज़ा पकवान</p>
 </header>
 
-<nav>
-    <a href="#combos">Combos</a>
-    <a href="#main">Main Course</a>
-    <a href="#local">Ranchi Special</a>
-    <a href="#chinese">Chinese</a>
-</nav>
+<div class="section">
+<h2>About Us | हमारे बारे में</h2>
+<p>
+Bhagwati Kitchen is a <b>pure vegetarian cloud kitchen in Ranchi</b>, serving homely Indian meals,
+North Indian curries, Chinese favorites, South Indian combos and local Jharkhand specials.
+<br><br>
+भगवती किचन में हर ऑर्डर ताज़ा, स्वच्छ और प्यार से बनाया जाता है।
+</p>
+</div>
 
-<section id="combos">
-    <h3 class="category-title">⭐ Top Sellers & Combos</h3>
-    <div class="menu-grid">
-        <div class="menu-item"><div class="item-info"><h4>Veg Thali</h4><p>Full North Indian Meal</p></div><span class="price">₹180</span></div>
-        <div class="menu-item"><div class="item-info"><h4>Punjabi Veg Combo</h4><p>4 Roti, Dal Fry, Mix Veg, Rice</p></div><span class="price">₹210</span></div>
-        <div class="menu-item"><div class="item-info"><h4>Chinese Veg Combo</h4><p>Fried Rice + Veg Manchurian</p></div><span class="price">₹190</span></div>
-        <div class="menu-item"><div class="item-info"><h4>South Indian Combo</h4><p>Dosa, Sambar, Chutney, Vada</p></div><span class="price">₹180</span></div>
-        <div class="menu-item"><div class="item-info"><h4>Chole Bhature Combo</h4><p>Classic North Indian Meal</p></div><span class="price">₹160</span></div>
-    </div>
-</section>
+<div class="section badges">
+<span>🌱 100% Pure Veg</span>
+<span>🍳 Freshly Cooked</span>
+<span>🧼 Hygienic Kitchen</span>
+<span>💰 Affordable Prices</span>
+</div>
 
-<section id="local" style="background: #f0f4f1;">
-    <h3 class="category-title">🌾 Local Specials (Ranchi)</h3>
-    <div class="menu-grid">
-        <div class="menu-item"><div class="item-info"><h4>Litti Chokha</h4><p>Jharkhand Special (Best Seller)</p></div><span class="price">₹140</span></div>
-        <div class="menu-item"><div class="item-info"><h4>Sattu Paratha</h4><p>Served with Fresh Curd</p></div><span class="price">₹130</span></div>
-        <div class="menu-item"><div class="item-info"><h4>Plain Veg Khichdi</h4><p>Light & Healthy Comfort Food</p></div><span class="price">₹120</span></div>
-    </div>
-</section>
+<div class="section card">
+<h2>⭐ Best Sellers</h2>
+<ul>
+<li>⭐ Veg Thali</li>
+<li>⭐ Paneer Butter Masala</li>
+<li>⭐ Chole Bhature</li>
+<li>⭐ Litti Chokha</li>
+</ul>
+</div>
 
-<section id="main">
-    <h3 class="category-title">🍛 Main Curries</h3>
-    <div class="menu-grid">
-        <div class="menu-item"><div class="item-info"><h4>Paneer Butter Masala</h4><p>Creamy & Rich</p></div><span class="price">₹220</span></div>
-        <div class="menu-item"><div class="item-info"><h4>Dal Tadka</h4><p>Home Style Yellow Dal</p></div><span class="price">₹140</span></div>
-        <div class="menu-item"><div class="item-info"><h4>Kadhai Paneer</h4><p>Spicy with Capsicum</p></div><span class="price">₹230</span></div>
-        <div class="menu-item"><div class="item-info"><h4>Malai Kofta</h4><p>North Indian Luxury</p></div><span class="price">₹250</span></div>
-        <div class="menu-item"><div class="item-info"><h4>Rajma Masala</h4><p>Punjabi Style Curry</p></div><span class="price">₹160</span></div>
-    </div>
-</section>
+<div class="section card">
+<h2>🔥 Today’s Special | आज का स्पेशल</h2>
+<p>
+✔ Veg Thali – ₹170 (Lunch Offer)<br>
+✔ Paneer Butter Masala + 2 Butter Naan – ₹199
+</p>
+</div>
 
-<section id="bowls">
-    <h3 class="category-title">🍱 Rice Bowls (Best for Delivery)</h3>
-    <div class="menu-grid">
-        <div class="menu-item"><div class="item-info"><h4>Rajma Chawal Bowl</h4><p>Classic Comfort</p></div><span class="price">₹150</span></div>
-        <div class="menu-item"><div class="item-info"><h4>Chole Chawal Bowl</h4><p>Spicy & Hearty</p></div><span class="price">₹150</span></div>
-        <div class="menu-item"><div class="item-info"><h4>Paneer Butter Rice Bowl</h4><p>Premium Veg Combo</p></div><span class="price">₹180</span></div>
-    </div>
-</section>
+<div class="section card">
+<h2>Order Menu via WhatsApp | WhatsApp से ऑर्डर करें</h2>
 
-<section id="chinese">
-    <h3 class="category-title">🍜 Indo-Chinese</h3>
-    <div class="menu-grid">
-        <div class="menu-item"><div class="item-info"><h4>Veg Fried Rice</h4><p>Classic Wok Tossed</p></div><span class="price">₹140</span></div>
-        <div class="menu-item"><div class="item-info"><h4>Veg Hakka Noodles</h4><p>Street Style Chinese</p></div><span class="price">₹150</span></div>
-        <div class="menu-item"><div class="item-info"><h4>Paneer Chilli</h4><p>Spicy Indo-Chinese Starter</p></div><span class="price">₹210</span></div>
-    </div>
-</section>
+<form id="whatsappForm">
+
+<!-- COMBO MEALS -->
+<div class="menu-category">
+<h3>COMBO MEALS</h3>
+<label>Veg Thali – ₹180: <input type="number" name="Veg Thali" min="0" value="0"></label>
+<label>Punjabi Combo – ₹200: <input type="number" name="Punjabi Combo" min="0" value="0"></label>
+<label>Chinese Combo – ₹200: <input type="number" name="Chinese Combo" min="0" value="0"></label>
+<label>South Indian Combo – ₹190: <input type="number" name="South Indian Combo" min="0" value="0"></label>
+<label>Chole Bhature Combo – ₹180: <input type="number" name="Chole Bhature Combo" min="0" value="0"></label>
+</div>
+
+<!-- MAIN CURRIES -->
+<div class="menu-category">
+<h3>MAIN CURRIES</h3>
+<label>Dal Tadka – ₹140: <input type="number" name="Dal Tadka" min="0" value="0"></label>
+<label>Rajma / Chole – ₹160: <input type="number" name="Rajma / Chole" min="0" value="0"></label>
+<label>Mix Veg – ₹180: <input type="number" name="Mix Veg" min="0" value="0"></label>
+<label>Paneer Butter Masala – ₹250: <input type="number" name="Paneer Butter Masala" min="0" value="0"></label>
+<label>Kadhai Paneer – ₹240: <input type="number" name="Kadhai Paneer" min="0" value="0"></label>
+<label>Malai Kofta – ₹250: <input type="number" name="Malai Kofta" min="0" value="0"></label>
+<label>Mushroom Masala – ₹230: <input type="number" name="Mushroom Masala" min="0" value="0"></label>
+</div>
+
+<!-- RICE & BREADS -->
+<div class="menu-category">
+<h3>RICE & BREADS</h3>
+<label>Steamed Rice – ₹80: <input type="number" name="Steamed Rice" min="0" value="0"></label>
+<label>Jeera Rice – ₹90: <input type="number" name="Jeera Rice" min="0" value="0"></label>
+<label>Butter Jeera Rice – ₹100: <input type="number" name="Butter Jeera Rice" min="0" value="0"></label>
+<label>Tawa Roti – ₹15: <input type="number" name="Tawa Roti" min="0" value="0"></label>
+<label>Butter Naan – ₹40: <input type="number" name="Butter Naan" min="0" value="0"></label>
+</div>
+
+<!-- CHINESE -->
+<div class="menu-category">
+<h3>CHINESE</h3>
+<label>Veg Fried Rice – ₹160: <input type="number" name="Veg Fried Rice" min="0" value="0"></label>
+<label>Veg Hakka Noodles – ₹160: <input type="number" name="Veg Hakka Noodles" min="0" value="0"></label>
+<label>Veg Manchurian – ₹160: <input type="number" name="Veg Manchurian" min="0" value="0"></label>
+<label>Paneer Chilli – ₹220: <input type="number" name="Paneer Chilli" min="0" value="0"></label>
+</div>
+
+<!-- SNACKS -->
+<div class="menu-category">
+<h3>SNACKS</h3>
+<label>Samosa (2 pcs) – ₹80: <input type="number" name="Samosa (2 pcs)" min="0" value="0"></label>
+<label>Veg Cutlet – ₹110: <input type="number" name="Veg Cutlet" min="0" value="0"></label>
+<label>Paneer Pakora – ₹150: <input type="number" name="Paneer Pakora" min="0" value="0"></label>
+<label>French Fries – ₹120: <input type="number" name="French Fries" min="0" value="0"></label>
+<label>Veg Momos (6 pcs) – ₹150: <input type="number" name="Veg Momos (6 pcs)" min="0" value="0"></label>
+</div>
+
+<!-- LOCAL SPECIAL -->
+<div class="menu-category">
+<h3>LOCAL SPECIAL</h3>
+<label>Litti Chokha (2 pcs) – ₹150: <input type="number" name="Litti Chokha (2 pcs)" min="0" value="0"></label>
+<label>Sattu Paratha with Curd – ₹140: <input type="number" name="Sattu Paratha with Curd" min="0" value="0"></label>
+<label>Khichdi – ₹120: <input type="number" name="Khichdi" min="0" value="0"></label>
+</div>
+
+<!-- DESSERTS & DRINKS -->
+<div class="menu-category">
+<h3>DESSERTS & DRINKS</h3>
+<label>Gulab Jamun – ₹80: <input type="number" name="Gulab Jamun" min="0" value="0"></label>
+<label>Fresh Lime Soda – ₹60: <input type="number" name="Fresh Lime Soda" min="0" value="0"></label>
+<label>Masala Chai – ₹40: <input type="number" name="Masala Chai" min="0" value="0"></label>
+</div>
+
+<button type="button" onclick="sendWhatsAppOrder()">Order via WhatsApp</button>
+</form>
+</div>
+
+<script>
+function sendWhatsAppOrder() {
+  const form = document.getElementById('whatsappForm');
+  let message = 'Hello Bhagwati Kitchen, I want to order:\n';
+  let hasItems = false;
+  for (let i = 0; i < form.elements.length; i++) {
+    const item = form.elements[i];
+    if (item.type === 'number' && item.value > 0) {
+      message += `${item.name}: ${item.value}\n`;
+      hasItems = true;
+    }
+  }
+  if (!hasItems) { alert('Please select at least one item.'); return; }
+  const whatsappNumber = '919304065255';
+  const url = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
+  window.open(url, '_blank');
+}
+</script>
+
+<div class="section">
+<h2>How to Order | ऑर्डर कैसे करें</h2>
+<p>
+1️⃣ Select items from the menu above<br>
+2️⃣ Click “Order via WhatsApp”<br>
+3️⃣ Garma-garam khana ghar tak 🍽️
+</p>
+</div>
+
+<div class="section">
+<h2>Customer Reviews</h2>
+<div class="review">⭐⭐⭐⭐⭐ “Ghar jaisa khana, bahut tasty!” – Ritu, Ranchi</div>
+<div class="review">⭐⭐⭐⭐⭐ “Paneer fresh tha, packing bhi achhi.” – Rahul, Ranchi</div>
+<div class="review">⭐⭐⭐⭐⭐ “Best veg food near Getlatu.” – Anjali, Ranchi</div>
+</div>
+
+<div class="section">
+<h2>Serving Areas</h2>
+<p>Getlatu • Bhagauti Nagar • Pandra • Harmu • Ratu Road • Ranchi</p>
+</div>
+
+<div class="section map-container">
+<h2>Our Location | हमारा स्थान</h2>
+<p>Bhagauti Nagar, Getlatu, Ranchi</p>
+<iframe
+  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3713.565414973908!2d85.29306241503882!3d23.3734529845877!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f4e7d7e2a4b2e9%3A0x1bdbf1e2d7b485f0!2sBhagauti%20Nagar%2C%20Ranchi%2C%20Jharkhand!5e0!3m2!1sen!2sin!4v1675987234567!5m2!1sen!2sin"
+  allowfullscreen="" loading="lazy"></iframe>
+</div>
 
 <footer>
-    <p><strong>Bhagwati Pure Veg Cloud Kitchen</strong></p>
-    <p>Ghagauti Nagar, Getlatu, Ranchi, Jharkhand</p>
-    <p>📞 9304065255 | 9507906227</p>
-    <p style="font-size: 0.8rem; margin-top: 20px; color: #666;">&copy; 2026 Bhagwati Pure Veg. Delivered with Purity.</p>
+© 2026 Bhagwati Kitchen | Pure Veg Cloud Kitchen
 </footer>
 
+<a class="whatsapp-float" href="https://wa.me/919304065255?text=Hello%20Bhagwati%20Kitchen,%20I%20want%20to%20place%20an%20order." target="_blank">💬</a>
+
 </body>
-</html>
+</html> 
