@@ -3,12 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bhagwati Pure Veg | Authentic Cloud Kitchen Ranchi</title>
-    <meta name="description" content="Authentic North Indian vegetarian cuisine delivered hot in Ranchi. Famous for Litti Chokha, Veg Thalis, and Punjabi Combos.">
-    
+    <title>Bhagwati Pure Veg | Ranchi's Best Cloud Kitchen</title>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-
     <style>
         :root {
             --primary-green: #1b4332;
@@ -16,221 +13,171 @@
             --whatsapp-color: #25D366;
             --light-bg: #fdfaf5;
             --white: #ffffff;
-            --shadow: 0 10px 30px rgba(0,0,0,0.08);
         }
 
         * { box-sizing: border-box; scroll-behavior: smooth; }
-        body { font-family: 'Poppins', sans-serif; margin:0; background-color: var(--light-bg); color: #333; line-height: 1.6; }
+        body { font-family: 'Poppins', sans-serif; margin:0; background-color: var(--light-bg); color: #333; }
 
-        /* Navigation */
-        nav { 
-            background: var(--white);
-            padding: 15px 0;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-            display: flex;
-            justify-content: center;
-            gap: 25px;
-        }
-        nav a { text-decoration: none; color: var(--primary-green); font-weight: 600; font-size: 0.9em; transition: 0.3s; }
-        nav a:hover { color: var(--accent-gold); }
-
-        /* Hero Section */
+        /* Logo and Hero Styling */
         .hero {
-            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1547928576-a4a33237bec3?auto=format&fit=crop&w=1600&q=80');
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1585937421612-70a008356fbe?auto=format&fit=crop&w=1600&q=80');
             background-size: cover;
             background-position: center;
-            height: 60vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
+            padding: 100px 20px;
             text-align: center;
             color: white;
-            padding: 20px;
-        }
-        .hero h1 { font-family: 'Playfair Display', serif; font-size: 3.5em; margin: 0; }
-        .hero p { font-size: 1.2em; color: var(--accent-gold); font-weight: bold; letter-spacing: 3px; margin-top: 10px; }
-
-        /* Sections */
-        section { padding: 80px 20px; max-width: 1000px; margin: 0 auto; }
-        h2 { 
-            font-family: 'Playfair Display', serif; 
-            color: var(--primary-green); 
-            text-align: center; 
-            font-size: 2.5em;
-            margin-bottom: 40px;
-        }
-        h2::after {
-            content: '';
-            display: block;
-            width: 80px;
-            height: 3px;
-            background: var(--accent-gold);
-            margin: 10px auto;
         }
 
-        /* Menu Styling */
-        .menu-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
-        .menu-card {
-            background: var(--white);
-            padding: 40px;
-            border-radius: 20px;
-            box-shadow: var(--shadow);
-            border-top: 5px solid var(--primary-green);
-        }
-        .menu-item { 
-            display: flex; 
-            justify-content: space-between; 
-            padding: 15px 0; 
-            border-bottom: 1px dashed #ddd;
-            transition: 0.3s;
-        }
-        .menu-item:hover { transform: translateX(5px); color: var(--primary-green); }
-        .price { color: var(--primary-green); font-weight: 700; }
-
-        /* Contact Cards */
-        .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; }
-        .info-card { 
-            background: white; 
-            padding: 40px; 
-            border-radius: 20px; 
-            text-align: center; 
-            box-shadow: var(--shadow);
-        }
-        .contact-btn {
+        .logo-container {
+            background: white;
+            padding: 15px;
+            border-radius: 50%;
             display: inline-block;
-            background: var(--primary-green);
-            color: white;
-            padding: 12px 30px;
-            text-decoration: none;
-            border-radius: 50px;
-            font-weight: 600;
-            margin-top: 15px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+        }
+
+        .main-logo { max-width: 140px; height: auto; display: block; }
+
+        nav { 
+            background: var(--white); 
+            padding: 15px; 
+            position: sticky; 
+            top: 0; 
+            z-index: 1000; 
+            text-align: center; 
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        nav a { margin: 0 15px; text-decoration: none; color: var(--primary-green); font-weight: 600; }
+
+        section { padding: 60px 20px; max-width: 1100px; margin: 0 auto; }
+        
+        .menu-category { margin-bottom: 40px; }
+        .category-title {
+            font-family: 'Playfair Display', serif;
+            color: var(--primary-green);
+            border-bottom: 3px solid var(--accent-gold);
+            display: inline-block;
+            margin-bottom: 25px;
+            font-size: 1.8rem;
+        }
+
+        .menu-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .menu-item {
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
             transition: 0.3s;
         }
-        .contact-btn:hover { background: var(--accent-gold); transform: translateY(-3px); }
 
-        /* Floating WhatsApp */
+        .menu-item:hover { transform: translateY(-3px); box-shadow: 0 6px 12px rgba(0,0,0,0.1); }
+        .item-info h4 { margin: 0; color: #222; font-size: 1rem; }
+        .item-info p { margin: 5px 0 0; font-size: 0.85rem; color: #777; }
+        .price { color: var(--primary-green); font-weight: 700; font-size: 1.1rem; }
+
         .whatsapp-float {
             position: fixed;
-            bottom: 30px;
-            right: 30px;
-            background-color: var(--whatsapp-color);
+            bottom: 20px;
+            right: 20px;
+            background: var(--whatsapp-color);
             color: white;
             padding: 15px 25px;
             border-radius: 50px;
             text-decoration: none;
             font-weight: bold;
-            box-shadow: 0 5px 20px rgba(37, 211, 102, 0.4);
-            z-index: 1001;
+            z-index: 2000;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
             display: flex;
             align-items: center;
-            transition: 0.3s;
         }
-        .whatsapp-float:hover { transform: scale(1.1); }
 
-        footer { background: #111; color: #888; text-align: center; padding: 40px; margin-top: 50px; }
-
-        @media (max-width: 768px) {
-            .contact-grid { grid-template-columns: 1fr; }
-            .hero h1 { font-size: 2.2em; }
-            section { padding: 50px 20px; }
-        }
+        footer { background: #111; color: white; text-align: center; padding: 30px; }
     </style>
 </head>
 <body>
 
-<a href="https://wa.me/919304065255?text=Hello!%20I%20want%20to%20place%20an%20order." class="whatsapp-float" target="_blank">
-    <i class="fab fa-whatsapp" style="font-size: 24px; margin-right: 10px;"></i> Order on WhatsApp
+<a href="https://wa.me/919304065255?text=I%20want%20to%20order%20from%20Bhagwati%20Pure%20Veg!" class="whatsapp-float">
+    <i class="fab fa-whatsapp" style="margin-right:10px; font-size:24px;"></i> Order Now
 </a>
 
-<nav>
-    <a href="#home">Home</a>
-    <a href="#about">About</a>
-    <a href="#menu">Menu</a>
-    <a href="#contact">Contact</a>
-</nav>
-
-<header class="hero" id="home">
-    <h1>Bhagwati Pure Veg</h1>
-    <p>PURE VEG CLOUD KITCHEN • RANCHI</p>
-    <a href="#menu" class="contact-btn" style="background: var(--accent-gold).logo-container {
-    background: white;
-    padding: 15px;
-    border-radius: 50%; /* Makes the white background circular */
-    display: inline-block;
-    margin-bottom: 20px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-}
-
-.main-logo {
-    max-width: 150px; /* Adjust size as needed */
-    height: auto;
-    display: block;
-};">Explore Our Menu</a>
-</header <header class="hero" id="home">
+<header class="hero">
     <div class="logo-container">
-        <img src="image_66b17e.jpg" alt="Bhagwati Pure Veg Logo" class="main-logo">
+        <img src="image_66b17e.jpg" alt="Bhagwati Logo" class="main-logo">
     </div>
-    <h1>Bhagwati Pure Veg</h1>
-    <p>PURE VEG CLOUD KITCHEN • RANCHI</p>
-    <a href="#menu" class="contact-btn" style="background: var(--accent-gold);">Explore Our Menu</a>
+    <h1 style="font-family: 'Playfair Display', serif; font-size: 3rem; margin: 10px 0;">Bhagwati Pure Veg</h1>
+    <p style="letter-spacing: 2px; color: var(--accent-gold); font-weight: bold;">AUTHENTIC CLOUD KITCHEN • RANCHI</p>
 </header>
 
-<section id="about">
-    <h2>Fresh. Pure. Traditional.</h2>
-    <p style="text-align: center; max-width: 700px; margin: 0 auto; font-size: 1.1em; color: #666;">
-        From the heart of Ranchi, we bring you the soul of North Indian vegetarian cooking. 
-        Whether it's the rustic taste of <strong>Litti Chokha</strong> or our signature <strong>Veg Thalis</strong>, 
-        we prioritize purity, hygiene, and authentic flavors in every delivery.
-    </p>
-</section>
+<nav>
+    <a href="#combos">Combos</a>
+    <a href="#main">Main Course</a>
+    <a href="#local">Ranchi Special</a>
+    <a href="#chinese">Chinese</a>
+</nav>
 
-<section id="menu">
-    <h2>Our Signature Menu</h2>
+<section id="combos">
+    <h3 class="category-title">⭐ Top Sellers & Combos</h3>
     <div class="menu-grid">
-        <div class="menu-card">
-            <h3 style="color: var(--accent-gold);"><i class="fas fa-utensils"></i> Combo Meals</h3>
-            <div class="menu-item"><span>Veg Thali – Full Meal</span><span class="price">₹180</span></div>
-            <div class="menu-item"><span>Punjabi Combo</span><span class="price">₹200</span></div>
-            <div class="menu-item"><span>Chinese Combo</span><span class="price">₹200</span></div>
-            <div class="menu-item"><span>Chole Bhature Combo</span><span class="price">₹180</span></div>
-        </div>
-
-        <div class="menu-card">
-            <h3 style="color: var(--accent-gold);"><i class="fas fa-map-marker-alt"></i> Ranchi Specials</h3>
-            <div class="menu-item"><span>Litti Chokha (2 pcs)</span><span class="price">₹150</span></div>
-            <div class="menu-item"><span>Sattu Paratha with Curd</span><span class="price">₹140</span></div>
-            <div class="menu-item"><span>Khichdi Tadka</span><span class="price">₹120</span></div>
-            <div class="menu-item"><span>Paneer Butter Masala</span><span class="price">₹220</span></div>
-        </div>
+        <div class="menu-item"><div class="item-info"><h4>Veg Thali</h4><p>Full North Indian Meal</p></div><span class="price">₹180</span></div>
+        <div class="menu-item"><div class="item-info"><h4>Punjabi Veg Combo</h4><p>4 Roti, Dal Fry, Mix Veg, Rice</p></div><span class="price">₹210</span></div>
+        <div class="menu-item"><div class="item-info"><h4>Chinese Veg Combo</h4><p>Fried Rice + Veg Manchurian</p></div><span class="price">₹190</span></div>
+        <div class="menu-item"><div class="item-info"><h4>South Indian Combo</h4><p>Dosa, Sambar, Chutney, Vada</p></div><span class="price">₹180</span></div>
+        <div class="menu-item"><div class="item-info"><h4>Chole Bhature Combo</h4><p>Classic North Indian Meal</p></div><span class="price">₹160</span></div>
     </div>
 </section>
 
-<section id="contact">
-    <h2>Get in Touch</h2>
-    <div class="contact-grid">
-        <div class="info-card">
-            <i class="fas fa-phone-alt" style="font-size: 2em; color: var(--accent-gold);"></i>
-            <p><strong>Call to Order:</strong></p>
-            <a href="tel:9304065255" class="contact-btn">9304065255</a><br>
-            <a href="tel:9507906227" class="contact-btn">9507906227</a>
-        </div>
-        <div class="info-card">
-            <i class="fas fa-store" style="font-size: 2em; color: var(--accent-gold);"></i>
-            <p><strong>Our Location:</strong></p>
-            <p style="color: #666;">Ghagauti Nagar, Getlatu,<br>Ranchi, Jharkhand - 834009</p>
-            <a href="https://www.google.com/maps" target="_blank" style="color: var(--primary-green); font-weight: bold;">View on Map</a>
-        </div>
+<section id="local" style="background: #f0f4f1;">
+    <h3 class="category-title">🌾 Local Specials (Ranchi)</h3>
+    <div class="menu-grid">
+        <div class="menu-item"><div class="item-info"><h4>Litti Chokha</h4><p>Jharkhand Special (Best Seller)</p></div><span class="price">₹140</span></div>
+        <div class="menu-item"><div class="item-info"><h4>Sattu Paratha</h4><p>Served with Fresh Curd</p></div><span class="price">₹130</span></div>
+        <div class="menu-item"><div class="item-info"><h4>Plain Veg Khichdi</h4><p>Light & Healthy Comfort Food</p></div><span class="price">₹120</span></div>
+    </div>
+</section>
+
+<section id="main">
+    <h3 class="category-title">🍛 Main Curries</h3>
+    <div class="menu-grid">
+        <div class="menu-item"><div class="item-info"><h4>Paneer Butter Masala</h4><p>Creamy & Rich</p></div><span class="price">₹220</span></div>
+        <div class="menu-item"><div class="item-info"><h4>Dal Tadka</h4><p>Home Style Yellow Dal</p></div><span class="price">₹140</span></div>
+        <div class="menu-item"><div class="item-info"><h4>Kadhai Paneer</h4><p>Spicy with Capsicum</p></div><span class="price">₹230</span></div>
+        <div class="menu-item"><div class="item-info"><h4>Malai Kofta</h4><p>North Indian Luxury</p></div><span class="price">₹250</span></div>
+        <div class="menu-item"><div class="item-info"><h4>Rajma Masala</h4><p>Punjabi Style Curry</p></div><span class="price">₹160</span></div>
+    </div>
+</section>
+
+<section id="bowls">
+    <h3 class="category-title">🍱 Rice Bowls (Best for Delivery)</h3>
+    <div class="menu-grid">
+        <div class="menu-item"><div class="item-info"><h4>Rajma Chawal Bowl</h4><p>Classic Comfort</p></div><span class="price">₹150</span></div>
+        <div class="menu-item"><div class="item-info"><h4>Chole Chawal Bowl</h4><p>Spicy & Hearty</p></div><span class="price">₹150</span></div>
+        <div class="menu-item"><div class="item-info"><h4>Paneer Butter Rice Bowl</h4><p>Premium Veg Combo</p></div><span class="price">₹180</span></div>
+    </div>
+</section>
+
+<section id="chinese">
+    <h3 class="category-title">🍜 Indo-Chinese</h3>
+    <div class="menu-grid">
+        <div class="menu-item"><div class="item-info"><h4>Veg Fried Rice</h4><p>Classic Wok Tossed</p></div><span class="price">₹140</span></div>
+        <div class="menu-item"><div class="item-info"><h4>Veg Hakka Noodles</h4><p>Street Style Chinese</p></div><span class="price">₹150</span></div>
+        <div class="menu-item"><div class="item-info"><h4>Paneer Chilli</h4><p>Spicy Indo-Chinese Starter</p></div><span class="price">₹210</span></div>
     </div>
 </section>
 
 <footer>
-    <p>&copy; 2026 Bhagwati Pure Veg Cloud Kitchen. All Rights Reserved.</p>
-    <p style="font-size: 0.8em; margin-top: 10px;">Created for flavor, delivered with love.</p>
+    <p><strong>Bhagwati Pure Veg Cloud Kitchen</strong></p>
+    <p>Ghagauti Nagar, Getlatu, Ranchi, Jharkhand</p>
+    <p>📞 9304065255 | 9507906227</p>
+    <p style="font-size: 0.8rem; margin-top: 20px; color: #666;">&copy; 2026 Bhagwati Pure Veg. Delivered with Purity.</p>
 </footer>
 
 </body>
