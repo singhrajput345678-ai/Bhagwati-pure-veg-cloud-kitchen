@@ -1,141 +1,236 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bhagwati Kitchen - Pure Veg Cloud Kitchen Ranchi</title>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --brand-yellow: #f4b41a;
-            --brand-green: #4b6a2f;
-            --bg-cream: #fdfae6;
-            --dark-brown: #4a342e;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        body { font-family: 'Poppins', sans-serif; background-color: var(--bg-cream); margin: 0; color: var(--dark-brown); }
-        
-        /* Banner & Logo */
-        header { background: white; text-align: center; padding: 15px; }
-        .logo-img { max-width: 150px; }
+<title>Bhagwati Kitchen | Pure Veg Cloud Kitchen</title>
 
-        .hero-banner { background-color: var(--brand-yellow); text-align: center; padding: 20px; border-bottom: 5px solid #d49a12; }
-        .hero-banner h1 { font-family: 'Playfair Display', serif; font-size: 2.5rem; margin: 0; color: var(--dark-brown); }
+<!-- APP ICON / FAVICON -->
+<link rel="icon" type="image/png" href="logo.png">
 
-        /* Gallery Section */
-        .food-gallery { display: flex; gap: 10px; padding: 10px; background: white; justify-content: center; }
-        .food-gallery img { width: 32%; border-radius: 5px; height: 200px; object-fit: cover; }
+<style>
+body{
+    margin:0;
+    font-family:'Segoe UI', Arial, sans-serif;
+    background:#fffdf8;
+    color:#333;
+}
 
-        /* Navigation */
-        nav { background: #4b6a2f; display: flex; justify-content: center; padding: 12px; }
-        nav a { color: #f4f09a; text-decoration: none; margin: 0 15px; font-weight: bold; font-size: 0.9rem; }
+/* HEADER */
+header{
+    background:linear-gradient(135deg,#1b5e20,#43a047);
+    color:white;
+    text-align:center;
+    padding:45px 15px;
+}
 
-        /* Menu Section */
-        .menu-container { padding: 30px 10%; display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 30px; }
-        .menu-card { background: transparent; }
-        .menu-card h3 { background: var(--brand-yellow); display: inline-block; padding: 5px 20px; border-radius: 5px; font-size: 1rem; margin-bottom: 15px; }
-        
-        .menu-item { display: flex; justify-content: space-between; margin-bottom: 8px; border-bottom: 1px dotted #ccc; padding-bottom: 5px; }
-        .price::before { content: "■ "; color: var(--brand-green); }
+.logo{
+    width:120px;
+    margin-bottom:15px;
+}
 
-        /* Buttons */
-        .order-buttons { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; padding: 40px 0; }
-        .btn { padding: 12px 25px; border-radius: 8px; text-decoration: none; color: white; font-weight: bold; font-size: 0.9rem; }
-        .btn-black { background: black; }
-        .btn-red { background: #cb202d; }
-        .btn-orange { background: #fc8019; }
-        .btn-whatsapp { background: #25d366; display: flex; align-items: center; gap: 8px; }
+header h1{
+    margin:0;
+    font-size:36px;
+}
 
-        /* Footer */
-        footer { background: var(--dark-brown); color: white; padding: 40px 10%; display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; font-size: 0.85rem; }
-        .footer-col h4 { border-bottom: 1px solid #777; padding-bottom: 5px; margin-bottom: 10px; }
+header p{
+    margin-top:10px;
+    font-size:16px;
+}
 
-        @media (max-width: 768px) {
-            .menu-container, footer { grid-template-columns: 1fr; }
-            .food-gallery img { height: 100px; }
-        }
-    </style>
+/* SECTIONS */
+section{
+    padding:40px 15px;
+    max-width:1100px;
+    margin:auto;
+}
+
+h2{
+    text-align:center;
+    color:#1b5e20;
+    margin-bottom:25px;
+}
+
+/* MENU */
+.menu-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
+
+.menu-card{
+    background:white;
+    border-radius:12px;
+    overflow:hidden;
+    box-shadow:0 4px 12px rgba(0,0,0,0.1);
+}
+
+.menu-card img{
+    width:100%;
+    height:160px;
+    object-fit:cover;
+}
+
+.menu-card div{
+    padding:15px;
+}
+
+.menu-card h3{
+    margin:0;
+    color:#2e7d32;
+}
+
+.price{
+    font-weight:bold;
+    margin-top:6px;
+}
+
+/* BUTTONS */
+.buttons{
+    text-align:center;
+}
+
+.btn{
+    display:inline-block;
+    margin:10px;
+    padding:15px 28px;
+    color:white;
+    text-decoration:none;
+    border-radius:30px;
+    font-weight:bold;
+}
+
+.whatsapp{background:#25D366;}
+.zomato{background:#e23744;}
+.swiggy{background:#fc8019;}
+.pdf{background:#555;}
+
+/* REVIEWS */
+.reviews{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
+
+.review{
+    background:white;
+    padding:20px;
+    border-radius:10px;
+    box-shadow:0 3px 8px rgba(0,0,0,0.08);
+}
+
+/* MAP */
+.map iframe{
+    width:100%;
+    height:300px;
+    border:0;
+    border-radius:12px;
+}
+
+/* FOOTER */
+footer{
+    background:#f1f1f1;
+    text-align:center;
+    padding:15px;
+    font-size:14px;
+}
+</style>
 </head>
+
 <body>
 
 <header>
-    <img src="https://i.ibb.co/hR0pY9z/logo.png" alt="Bhagwati Logo" class="logo-img">
+    <img src="logo.png" alt="Bhagwati Kitchen Logo" class="logo">
+    <h1>Bhagwati Kitchen</h1>
+    <p>Pure Veg • Home Style Food • Cloud Kitchen</p>
 </header>
 
-<div class="hero-banner">
-    <h1>Taste of Home, Delivered.</h1>
-</div>
+<section>
+    <h2>About Us</h2>
+    <p style="text-align:center;max-width:750px;margin:auto;">
+        Bhagwati Kitchen offers hygienic, freshly cooked pure vegetarian
+        meals with authentic home-style taste. Quality & cleanliness
+        are our top priority.
+    </p>
+</section>
 
-<div class="food-gallery">
-    <img src="https://images.unsplash.com/photo-1546833999-b9f581a1996d?q=80&w=400" alt="Thali">
-    <img src="https://images.unsplash.com/photo-1631452180519-c014fe946bc7?q=80&w=400" alt="Paneer">
-    <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?q=80&w=400" alt="Healthy">
-</div>
+<section>
+    <h2>Our Menu</h2>
+    <div class="menu-grid">
 
-<nav>
-    <a href="#">Home</a>
-    <a href="#">About Us</a>
-    <a href="#">Menu</a>
-    <a href="#">Order Now</a>
-    <a href="#">Contact</a>
-</nav>
+        <div class="menu-card">
+            <img src="https://source.unsplash.com/400x300/?veg-thali">
+            <div>
+                <h3>Veg Thali</h3>
+                <p class="price">₹120</p>
+            </div>
+        </div>
 
-<div class="menu-container">
-    <div class="menu-card">
-        <h3>COMBO MEALS</h3>
-        <div class="menu-item"><span>Veg Thali</span> <span class="price">180</span></div>
-        <div class="menu-item"><span>Punjabi Combo</span> <span class="price">200</span></div>
-        <div class="menu-item"><span>Chinese Combo</span> <span class="price">200</span></div>
-    </div>
-    <div class="menu-card">
-        <h3>MAIN CURRIES</h3>
-        <div class="menu-item"><span>Paneer Butter Masala</span> <span class="price">250</span></div>
-        <div class="menu-item"><span>Dal Tadka</span> <span class="price">140</span></div>
-    </div>
-    <div class="menu-card">
-        <h3>RICE & BREADS</h3>
-        <div class="menu-item"><span>Jeera Rice</span> <span class="price">90</span></div>
-        <div class="menu-item"><span>Butter Naan</span> <span class="price">40</span></div>
-    </div>
+        <div class="menu-card">
+            <img src="https://source.unsplash.com/400x300/?paneer">
+            <div>
+                <h3>Paneer Butter Masala</h3>
+                <p class="price">₹180</p>
+            </div>
+        </div>
 
-    <div class="menu-card">
-        <h3>CHINESE</h3>
-        <div class="menu-item"><span>Veg Manchurian</span> <span class="price">160</span></div>
-    </div>
-    <div class="menu-card">
-        <h3>SNACKS</h3>
-        <div class="menu-item"><span>Samosa (2 pcs)</span> <span class="price">80</span></div>
-        <div class="menu-item"><span>Veg Momos</span> <span class="price">150</span></div>
-    </div>
-    <div class="menu-card">
-        <h3>LOCAL SPECIAL</h3>
-        <div class="menu-item"><span>Litti Chokha</span> <span class="price">150</span></div>
-        <div class="menu-item"><span>Sattu Paratha</span> <span class="price">140</span></div>
-    </div>
-</div>
+        <div class="menu-card">
+            <img src="https://source.unsplash.com/400x300/?dal-rice">
+            <div>
+                <h3>Dal Fry + Rice</h3>
+                <p class="price">₹110</p>
+            </div>
+        </div>
 
-<div class="order-buttons">
-    <a href="#" class="btn btn-black">Order on UberEats</a>
-    <a href="#" class="btn btn-red">Order on Zomato</a>
-    <a href="#" class="btn btn-orange">Order on Swiggy</a>
-    <a href="https://wa.me/919812431190?text=Hello%20Bhagwati%20Kitchen,%20I%20would%20like%20to%20place%20an%20order." class="btn btn-whatsapp">
-        WhatsApp Order
-    </a>
-</div>
+        <div class="menu-card">
+            <img src="https://source.unsplash.com/400x300/?indian-vegetables">
+            <div>
+                <h3>Seasonal Sabzi</h3>
+                <p class="price">₹90</p>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<section class="buttons">
+    <h2>Order Now</h2>
+
+    <a class="btn whatsapp"
+       href="https://wa.me/919304065255?text=Hello%20Bhagwati%20Kitchen,%20I%20want%20to%20place%20an%20order."
+       target="_blank">WhatsApp – 9304065255</a>
+
+    <a class="btn whatsapp"
+       href="https://wa.me/919507906227?text=Hello%20Bhagwati%20Kitchen,%20I%20want%20to%20place%20an%20order."
+       target="_blank">WhatsApp – 9507906227</a>
+
+    <br>
+
+    <a class="btn zomato" href="#">Order on Zomato</a>
+    <a class="btn swiggy" href="#">Order on Swiggy</a>
+    <br>
+
+    <a class="btn pdf" href="#">Download Menu (PDF)</a>
+</section>
+
+<section>
+    <h2>Customer Reviews</h2>
+    <div class="reviews">
+        <div class="review">⭐️⭐️⭐️⭐️⭐️<br>Very tasty and hygienic food!</div>
+        <div class="review">⭐️⭐️⭐️⭐️⭐️<br>Best pure veg cloud kitchen.</div>
+        <div class="review">⭐️⭐️⭐️⭐️⭐️<br>Home-style taste, loved it.</div>
+    </div>
+</section>
+
+<section class="map">
+    <h2>Our Location</h2>
+    <iframe src="https://www.google.com/maps?q=Ranchi,Jharkhand&output=embed"></iframe>
+</section>
 
 <footer>
-    <div class="footer-col">
-        <h4>Operating Hours:</h4>
-        <p>09:00 - 23:30</p>
-    </div>
-    <div class="footer-col">
-        <h4>Location:</h4>
-        <p>Bhagauti Nagar, Getlatu, Ranchi</p>
-    </div>
-    <div class="footer-col">
-        <h4>Contact Information:</h4>
-        <p>+91 9812431190</p>
-    </div>
+    © 2026 Bhagwati Kitchen | Pure Veg Cloud Kitchen
 </footer>
 
 </body>
